@@ -7,21 +7,14 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/edtUsuario"
+        android:id="@+id/edtCodigo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuário" />
-
-    <EditText
-        android:id="@+id/edtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword" />
+        android:hint="Código do Produto" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnDeletar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar" />
+        android:text="Deletar" />
 </LinearLayout>

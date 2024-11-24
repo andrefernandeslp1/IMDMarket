@@ -6,22 +6,27 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/edtUsuario"
+    <Button
+        android:id="@+id/btnCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuário" />
-
-    <EditText
-        android:id="@+id/edtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword" />
+        android:text="Cadastrar Produto" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnAlteracao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar" />
+        android:text="Alterar Produto" />
+
+    <Button
+        android:id="@+id/btnExclusao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Excluir Produto" />
+
+    <Button
+        android:id="@+id/btnListagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar Produtos" />
 </LinearLayout>

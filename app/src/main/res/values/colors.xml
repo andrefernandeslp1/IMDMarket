@@ -2,4 +2,55 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- Azul -->
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="light_blue_200">#81D4FA</color>
+
+    <!-- Cores Pastel -->
+    <color name="pastel_pink">#F8BBD0</color>
+    <color name="pastel_purple">#CE93D8</color>
+    <color name="pastel_blue">#90CAF9</color>
+
+    <!-- Tons Neutros -->
+
+
+    <!-- Vibrantes -->
+    <color name="red_500">#F44336</color>
+
+
+    <!-- Verde -->
+    <color name="green_500">#4CAF50</color>
+    <color name="green_700">#388E3C</color>
+    <color name="lime_200">#E6EE9C</color>
+
+    <!-- Tema Escuro -->
+    <color name="dark_gray">#212121</color>
+
+
+    <!-- Inspirado na Natureza -->
+    <color name="forest_green">#2E7D32</color>
+    <color name="olive">#827717</color>
+    <color name="sky_blue">#03A9F4</color>
+
+    <!-- Minimalista -->
+    <color name="light_gray">#D3D3D3</color>
+
+    <!-- Tons Quentes -->
+    <color name="orange_500">#FF9800</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="yellow_500">#FFEB3B</color>
+
+    <!-- Monocromático -->
+    <color name="gray_900">#212121</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_500">#9E9E9E</color>
+
+
 </resources>
