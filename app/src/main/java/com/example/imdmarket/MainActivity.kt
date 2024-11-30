@@ -18,15 +18,15 @@ class MainActivity : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
-            val usuario = edtUsuario.text.toString()
-            val senha = edtSenha.text.toString()
+            // val usuario = edtUsuario.text.toString()
+            // val senha = edtSenha.text.toString()
 
-            if (usuario == "admin" && senha == "admin") {
+            // if (usuario == "admin" && senha == "admin") {
                 val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
-            } else {
-                Toast.makeText(this, "Credenciais inválidas", Toast.LENGTH_SHORT).show()
-            }
+            // } else {
+            //     Toast.makeText(this, "Credenciais inválidas", Toast.LENGTH_SHORT).show()
+            // }
         }
     }
 }

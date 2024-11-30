@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 class AlteracaoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        // enableEdgeToEdge()
         setContentView(R.layout.activity_alteracao)
 
     }

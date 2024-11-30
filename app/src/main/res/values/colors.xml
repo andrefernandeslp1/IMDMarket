@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple">#673AB7</color>
     <color name="purple_200">#BB86FC</color>
     <color name="purple_500">#6200EE</color>
     <color name="purple_700">#3700B3</color>
@@ -20,10 +21,8 @@
 
     <!-- Tons Neutros -->
 
-
     <!-- Vibrantes -->
     <color name="red_500">#F44336</color>
-
 
     <!-- Verde -->
     <color name="green_500">#4CAF50</color>
@@ -32,7 +31,6 @@
 
     <!-- Tema Escuro -->
     <color name="dark_gray">#212121</color>
-
 
     <!-- Inspirado na Natureza -->
     <color name="forest_green">#2E7D32</color>
