@@ -18,21 +18,19 @@ class MainActivity : AppCompatActivity() {
         val edtSenha = findViewById<EditText>(R.id.edtSenha)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
+        val sharedPreferences = getSharedPreferences("user_credentials", Context.MODE_PRIVATE)
+
+        val editor = sharedPreferences.edit()
+        editor.putString("login", "admin")
+        editor.putString("password", "admin")
+        editor.apply()
+
         btnLogin.setOnClickListener {
             val usuario = edtUsuario.text.toString()
             val senha = edtSenha.text.toString()
 
-            val sharedPreferences = getSharedPreferences("user_credentials", Context.MODE_PRIVATE)
-
             val savedUsuario = sharedPreferences.getString("login", null)
             val savedSenha = sharedPreferences.getString("password", null)
-
-            if(savedUsuario == null || savedSenha == null) {
-              val editor = sharedPreferences.edit()
-              editor.putString("login", "admin")
-              editor.putString("password", "admin")
-              editor.apply()
-            }
 
             if (usuario == savedUsuario && senha == savedSenha) {
                 val intent = Intent(this, MenuActivity::class.java)
