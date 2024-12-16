@@ -1,5 +1,6 @@
 package com.example.imdmarket
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -21,7 +22,19 @@ class MainActivity : AppCompatActivity() {
             val usuario = edtUsuario.text.toString()
             val senha = edtSenha.text.toString()
 
-            if (usuario == "admin" && senha == "admin") {
+            val sharedPreferences = getSharedPreferences("user_credentials", Context.MODE_PRIVATE)
+
+            val savedUsuario = sharedPreferences.getString("login", null)
+            val savedSenha = sharedPreferences.getString("password", null)
+
+            if(savedUsuario == null || savedSenha == null) {
+              val editor = sharedPreferences.edit()
+              editor.putString("login", "admin")
+              editor.putString("password", "admin")
+              editor.apply()
+            }
+
+            if (usuario == savedUsuario && senha == savedSenha) {
                 val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
             } else {

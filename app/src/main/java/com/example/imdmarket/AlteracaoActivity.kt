@@ -19,6 +19,14 @@ class AlteracaoActivity : AppCompatActivity() {
         val edtDescricao = findViewById<EditText>(R.id.edtDescricao)
         val edtEstoque = findViewById<EditText>(R.id.edtEstoque)
         val btnAlterar = findViewById<Button>(R.id.btnAlterar)
+        val btnLimpar = findViewById<Button>(R.id.btnLimpar)
+
+        btnLimpar.setOnClickListener {
+            edtCodigo.text.clear()
+            edtNome.text.clear()
+            edtDescricao.text.clear()
+            edtEstoque.text.clear()
+        }
 
         btnAlterar.setOnClickListener {
             val codigo = edtCodigo.text.toString().trim()

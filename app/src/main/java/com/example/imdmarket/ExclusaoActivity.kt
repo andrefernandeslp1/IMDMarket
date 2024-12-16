@@ -19,6 +19,11 @@ class ExclusaoActivity : AppCompatActivity() {
 
         val edtCodigo = findViewById<EditText>(R.id.edtCodigo)
         val btnDeletar = findViewById<Button>(R.id.btnDeletar)
+        val btnLimpar = findViewById<Button>(R.id.btnLimpar)
+
+        btnLimpar.setOnClickListener {
+            edtCodigo.text.clear()
+        }
 
         btnDeletar.setOnClickListener {
             val codigo = edtCodigo.text.toString()

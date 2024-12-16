@@ -1,7 +1,9 @@
 package com.example.imdmarket
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.imdmarket.database.ProdutoFileHelper
@@ -18,6 +20,10 @@ class ListagemActivity : AppCompatActivity() {
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaExemplo)
         listView.adapter = adapter
+
+        findViewById<Button>(R.id.btnVoltar).setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
+        }
 
     }
 }
