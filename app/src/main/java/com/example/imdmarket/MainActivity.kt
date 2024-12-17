@@ -1,5 +1,6 @@
 package com.example.imdmarket
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -17,16 +18,26 @@ class MainActivity : AppCompatActivity() {
         val edtSenha = findViewById<EditText>(R.id.edtSenha)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
-        btnLogin.setOnClickListener {
-            // val usuario = edtUsuario.text.toString()
-            // val senha = edtSenha.text.toString()
+        val sharedPreferences = getSharedPreferences("user_credentials", Context.MODE_PRIVATE)
 
-            // if (usuario == "admin" && senha == "admin") {
+        val editor = sharedPreferences.edit()
+        editor.putString("login", "admin")
+        editor.putString("password", "admin")
+        editor.apply()
+
+        btnLogin.setOnClickListener {
+            val usuario = edtUsuario.text.toString()
+            val senha = edtSenha.text.toString()
+
+            val savedUsuario = sharedPreferences.getString("login", null)
+            val savedSenha = sharedPreferences.getString("password", null)
+
+            if (usuario == savedUsuario && senha == savedSenha) {
                 val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
-            // } else {
-            //     Toast.makeText(this, "Credenciais inválidas", Toast.LENGTH_SHORT).show()
-            // }
+            } else {
+                Toast.makeText(this, "Credenciais inválidas", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
